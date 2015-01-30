@@ -1,4 +1,4 @@
-<h1>Listing posts</h1>
+<h1>Listing concerts</h1>
 
 <table>
   <thead>
@@ -8,9 +8,9 @@
   </thead>
 
   <tbody>
-    <% @posts.each do |post| %>
+    <% @concerts.each do |concert| %>
       <tr>
-        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Show', concert %></td>
       </tr>
     <% end %>
   </tbody>
