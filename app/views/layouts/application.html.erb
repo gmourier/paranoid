@@ -22,6 +22,10 @@
               <ul class="nav navbar-nav navbar-right">
                 <li><%= link_to "Home", root_path %></li>
                 <li><%= link_to "Concerts", concerts_path %></li>
+                <% pages = generate_nav %>
+                <% pages.each do |page| %>
+                  <li><%= link_to page.title, page %></li>
+                <% end %>
               </ul>
             </div><!--/.nav-collapse -->
         </div>

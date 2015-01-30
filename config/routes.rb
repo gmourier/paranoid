@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   
   resources :posts, only: [:index, :show] 
   resources :concerts, only: [:index, :show]
+  resources :pages, only: :show
 
 end
