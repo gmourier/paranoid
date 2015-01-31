@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   resources :posts, only: [:index, :show] 
   resources :concerts, only: [:index, :show]
   resources :pages, only: :show
-
+  resources :medias, only: :index
+  resources :sponsors, only: [:index, :show]
 end

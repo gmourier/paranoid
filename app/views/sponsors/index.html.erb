@@ -1,0 +1,20 @@
+<h1>Listing sponsors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sponsors.each do |sponsor| %>
+      <tr>
+        <td><%= image_tag sponsor.logo.url(:thumb) %></td>
+        <td><%= link_to 'Show', sponsor %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

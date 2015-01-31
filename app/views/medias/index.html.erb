@@ -1,0 +1,19 @@
+<h1>Listing medias</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @medias.each do |media| %>
+      <tr>
+        <td><%= image_tag media.file.url(:thumb) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

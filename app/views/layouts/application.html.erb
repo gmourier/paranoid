@@ -7,6 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
     <nav class="navbar navbar-inverse">
         <div class="container">
             <div class="navbar-header">
@@ -24,7 +32,7 @@
                 <li><%= link_to "Concerts", concerts_path %></li>
                 <% pages = generate_nav %>
                 <% pages.each do |page| %>
-                  <li><%= link_to page.title, page %></li>
+                  <li><%= link_to page.title.capitalize, page %></li>
                 <% end %>
               </ul>
             </div><!--/.nav-collapse -->
@@ -37,7 +45,7 @@
 
     <div class="footer">
       <div class="container">
-        Paranoid Sky - <%= Time.now.year %> <span class="pull-right">Crafted by Guillaume Mourier</span>
+        Paranoid Sky - <%= Time.now.year %> <span class="small pull-right">Crafted by Guillaume Mourier</span>
       </div>
     </div>
 </body>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150131140357) do
+ActiveRecord::Schema.define(version: 20150131152208) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -79,6 +79,18 @@ ActiveRecord::Schema.define(version: 20150131140357) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
+  create_table "media", force: true do |t|
+    t.string   "title"
+    t.boolean  "publish"
+    t.string   "alt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+  end
+
   create_table "pages", force: true do |t|
     t.string   "title"
     t.text     "content"
@@ -98,5 +110,16 @@ ActiveRecord::Schema.define(version: 20150131140357) do
   end
 
   add_index "posts", ["slug"], name: "index_posts_on_slug", unique: true, using: :btree
+
+  create_table "sponsors", force: true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+  end
 
 end
