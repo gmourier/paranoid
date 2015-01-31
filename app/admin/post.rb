@@ -4,7 +4,7 @@ ActiveAdmin.register Post do
   form do |f|
     f.inputs "New post" do
       f.input :title
-      f.input :content
+      f.input :content, as: :html_editor
       f.input :publish
     end
     f.actions

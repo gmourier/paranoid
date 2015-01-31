@@ -5,7 +5,7 @@ ActiveAdmin.register Concert do
     f.inputs "New concert" do
       f.input :name
       f.input :show_at
-      f.input :description
+      f.input :description, as: :html_editor
       f.input :country, :as => :string #avoid formtastic country_select detection
       f.input :city
       f.input :street

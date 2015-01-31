@@ -21,4 +21,5 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 gem 'active_skin'
+gem 'active_admin_editor'
 gem 'friendly_id', '~> 5.1.0'
