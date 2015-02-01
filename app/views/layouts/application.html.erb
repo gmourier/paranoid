@@ -8,6 +8,7 @@
 </head>
 <body>
   <%= render "utils/facebook" %>
+  </br>
   <div class="container">
     <nav class="navbar navbar-inverse">
       <div class="navbar-header">
@@ -26,13 +27,14 @@
       </div><!--/.nav-collapse -->
     </nav>
   </div>
+  <div class="container">
+    <%= yield %>
+  </div>
+  <hr>
+  <div class="footer">
     <div class="container">
-        <%= yield %>
+      Paranoid Sky - <%= Time.now.year %> <span class="small pull-right">Crafted by Guillaume Mourier</span>
     </div>
-    <div class="footer">
-      <div class="container">
-        Paranoid Sky - <%= Time.now.year %> <span class="small pull-right">Crafted by Guillaume Mourier</span>
-      </div>
-    </div>
+  </div>
 </body>
 </html>

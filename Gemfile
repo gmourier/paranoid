@@ -25,3 +25,5 @@ gem 'active_admin_editor'
 gem 'friendly_id', '~> 5.1.0'
 
 gem 'paperclip', '~> 4.2'
+
+gem 'will_paginate-bootstrap'
