@@ -13,7 +13,14 @@ class Concert < ActiveRecord::Base
     validates :street, presence: true
     validates :slug, presence: true, uniqueness: true
 
+    paginates_per 10
+    
     def should_generate_new_friendly_id?
       slug.blank? || name_changed?
+    end
+
+    def display_map
+        return "https://maps.googleapis.com/maps/api/staticmap?zoom=17&maptype=roadmap&size=350x200
+            &markers=color:red%7C4#{lat},#{long}&scale=1"
     end
 end

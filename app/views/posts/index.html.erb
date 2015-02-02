@@ -2,7 +2,9 @@
   <li><%= link_to "Home", root_path %></li>
   <li class="active"><%= link_to "Posts", posts_path %></li>
 </ol>
-<%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+
+<%= paginate @posts, :theme => 'twitter-bootstrap-3' %>
+
 <% @posts.each do |post| %>
   <div class="media">
     <div class="media-left">
@@ -28,4 +30,4 @@
   <hr>
 <% end %>
 
-<%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+<%= paginate @posts, :theme => 'twitter-bootstrap-3' %>

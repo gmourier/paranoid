@@ -1,1 +1,15 @@
-<%= link_to 'Back', concerts_path %>
+<ol class="breadcrumb">
+  <li><%= link_to "Home", root_path %></li>
+  <li><%= link_to "Concerts", concerts_path %></li>
+  <li class="active"><%= @concert.name.capitalize %></li>
+</ol>
+
+<div class="row">
+    <div class="col-md-8">
+        <h1><%= @concert.name.capitalize %></h1>
+        <p class="text-justify"><%= @concert.description.html_safe %></p>
+    </div>
+    <div class="col-md-4">
+        <%= image_tag @concert.display_map %>
+    </div>
+</div>
