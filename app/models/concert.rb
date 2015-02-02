@@ -20,7 +20,7 @@ class Concert < ActiveRecord::Base
     end
 
     def display_map
-        return "https://maps.googleapis.com/maps/api/staticmap?zoom=17&maptype=roadmap&size=350x200
-            &markers=color:red%7C4#{lat},#{long}&scale=1"
+        return "https://maps.googleapis.com/maps/api/staticmap?zoom=14&maptype=roadmap&size=350x350
+            &markers=color:red%7C#{lat}, #{long}&scale=1"
     end
 end
