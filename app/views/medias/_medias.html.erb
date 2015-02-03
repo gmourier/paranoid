@@ -1,10 +1,10 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Last medias</h3>
+    <h3 class="panel-title">Gallery</h3>
   </div>
   <div class="panel-body">
     <% @medias.each do |media| %>
-      <%= image_tag media.file.url(:thumb) %>
+      <%= image_tag media.file.url(:thumb), size: "50" %>
     <% end %>
   </div>
   <div class="panel-footer">
