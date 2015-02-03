@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150203124600) do
+ActiveRecord::Schema.define(version: 20150203143219) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -62,6 +62,18 @@ ActiveRecord::Schema.define(version: 20150203124600) do
   end
 
   add_index "albums", ["slug"], name: "index_albums_on_slug", unique: true, using: :btree
+
+  create_table "carousels", force: true do |t|
+    t.string   "title"
+    t.string   "content"
+    t.boolean  "publish"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
+  end
 
   create_table "concerts", force: true do |t|
     t.string   "name"

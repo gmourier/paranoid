@@ -1,24 +1,13 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">News</h3>
+    <h3 class="panel-title">Lasts Posts</h3>
   </div>
   <div class="panel-body">
     <% @posts.each do |post| %>
       <div class="row">
         <div class="col-xs-12">
-          <div class="media">
-            <div class="media-left">
-              <a href="#">
-                <img class="media-object" src="http://lorempicsum.com/futurama/64/64/1">
-              </a>
-            </div>
-            <div class="media-body">
-              <h4 class="media-heading"><%= post.title %></h4>
-              <p><%= truncate(strip_tags(post.content), length: 50) %></p>
-            </div>
-          </div>
-          </br>
-          <p class="lead"><%= link_to "Read more", post, :class => "btn btn-sm btn-default" %></p>
+          <h4 class="media-heading"><%= link_to post.title, post %></h4>
+          <p class="text-justify"><%= truncate(strip_tags(post.content), length: 200) %></p>
           <p class="pull-right">
             <span class="label label-default">keyword</span> 
             <span class="label label-default">tag</span> 

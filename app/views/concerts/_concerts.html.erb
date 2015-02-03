@@ -1,16 +1,17 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Upcoming gigs</h3>
+    <h3 class="panel-title">Next Gigs</h3>
   </div>
   <div class="panel-body">
     <% @concerts.each do |concert| %>
       <div class="row">
         <div class="col-xs-2 col-sm-2 col-md-2">
-          <b><%= concert.show_at.day %></b>
+          <span style="font-size:20pt"><b><%= concert.show_at.day %></b></span>
           <b><%= concert.show_at.strftime("%b") %></b>
         </div>
         <div class="col-xs-10 col-sm-10 col-md-10">
-            <%= link_to concert.name.capitalize, concert %>
+            <%= link_to concert.name.capitalize, concert %><hr>
+            <%= concert.city %>, <%= concert.country %>
         </div>
       </div>
       <hr>
