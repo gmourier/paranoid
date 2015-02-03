@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150203122307) do
+ActiveRecord::Schema.define(version: 20150203124600) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -53,7 +53,15 @@ ActiveRecord::Schema.define(version: 20150203122307) do
     t.text     "bandcamp"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
+    t.string   "slug"
+    t.date     "released_at"
   end
+
+  add_index "albums", ["slug"], name: "index_albums_on_slug", unique: true, using: :btree
 
   create_table "concerts", force: true do |t|
     t.string   "name"

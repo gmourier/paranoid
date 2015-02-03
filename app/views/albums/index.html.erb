@@ -1,0 +1,18 @@
+<ol class="breadcrumb">
+  <li><%= link_to "Home", root_path %></li>
+  <li class="active"><%= link_to "Albums", albums_path %></li>
+</ol>
+
+<div class="row">
+  <div class="col-md-8">
+    <%= paginate @albums, :theme => 'twitter-bootstrap-3' %>
+    <% @albums.each do |album| %>
+      <%= link_to album.name, album %>
+      <hr>
+    <% end %>
+    <%= paginate @albums, :theme => 'twitter-bootstrap-3' %>
+  </div>
+  <div class="col-md-4">
+    <%= render "utils/like" %>
+  </div>
+</div>
