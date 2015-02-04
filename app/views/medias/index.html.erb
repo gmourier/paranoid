@@ -10,7 +10,7 @@
   <tbody>
     <% @medias.each do |media| %>
       <tr>
-        <td><%= image_tag media.file.url(:thumb) %></td>
+        <td><%= link_to image_tag(media.file.url(:thumb), size: "50"), media.file.url(:original), class: "fancybox" %></td>
       </tr>
     <% end %>
   </tbody>

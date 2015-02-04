@@ -4,7 +4,7 @@
   </div>
   <div class="panel-body">
     <% @medias.each do |media| %>
-      <%= image_tag media.file.url(:thumb), size: "50" %>
+      <%= link_to image_tag(media.file.url(:thumb), size: "50"), media.file.url(:original), class: "fancybox" %>
     <% end %>
   </div>
   <div class="panel-footer">
