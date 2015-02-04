@@ -14,8 +14,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require fancybox
-
-$(document).ready(function() {
-  $("a.fancybox").fancybox();
-});
+//= require init_fancybox
