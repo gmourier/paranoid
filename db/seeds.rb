@@ -28,3 +28,7 @@ end
 2.times do |i|
     Page.create(title: Faker::Lorem.word, content: Faker::Lorem.paragraph(5), publish: true)
 end
+
+5.times do |i|
+    Tag.create(label: Faker::Lorem.word)
+end

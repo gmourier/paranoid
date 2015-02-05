@@ -9,4 +9,3 @@ ready = ->
       this.title = alt
 
 $(document).ready(ready)
-$(document).on('page:change', ready)

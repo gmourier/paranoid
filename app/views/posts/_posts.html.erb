@@ -9,9 +9,9 @@
           <h4 class="media-heading"><%= link_to post.title, post %></h4>
           <p class="text-justify"><%= truncate(strip_tags(post.content), length: 200) %></p>
           <p class="pull-right">
-            <span class="label label-default">keyword</span> 
-            <span class="label label-default">tag</span> 
-            <span class="label label-default">post</span>
+            <% post.tags.each do |t| %>
+            <span class="label label-warning"><%= t.label %></span> 
+            <% end %>
           </p>
           <ul class="list-inline">
             <li><a href="#"><%= distance_of_time_in_words_to_now(post.created_at) %> ago</a></li>

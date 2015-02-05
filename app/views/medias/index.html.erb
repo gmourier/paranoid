@@ -4,11 +4,10 @@
 </ol>
 
 <% @medias.each do |media| %>
-  <%= link_to image_tag(media.file.url(:thumb), size: "50"), 
+  <%= link_to image_tag(media.file.url(:thumb), size: "50", alt: media.title.capitalize), 
       media.file.url(:original), {
         :rel => "gallery", 
-        :class => "fancybox", 
-        "alt" => media.title
+        :class => "fancybox"
       }
   %>
 <% end %>
