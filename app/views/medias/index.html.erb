@@ -4,14 +4,14 @@
 </ol>
 
 <div class="panel panel-default">
-    <div class="panel-body">
-        <% @medias.each do |media| %>
-          <%= link_to image_tag(media.file.url(:thumb), size: "50", alt: media.title.capitalize), 
-              media.file.url(:original), {
-                :rel => "gallery", 
-                :class => "fancybox"
-              }
-          %>
-        <% end %>
-    </div>
+  <div class="panel-body">
+    <% @medias.each do |media| %>
+      <%= link_to image_tag(media.file.url(:thumb), size: "50", alt: media.title.capitalize), 
+          media.file.url(:original), {
+            :rel => "gallery", 
+            :class => "fancybox"
+          }
+      %>
+    <% end %>
+  </div>
 </div>
