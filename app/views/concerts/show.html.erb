@@ -5,11 +5,17 @@
 </ol>
 
 <div class="row">
-    <div class="col-md-8">
-        <h1><%= @concert.name.capitalize %></h1>
-        <p class="text-justify"><%= @concert.description.html_safe %></p>
+    <div class="col-md-9">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><%= @concert.name.capitalize %></h3>
+        </div>
+        <div class="panel-body">
+          <p class="text-justify"><%= @concert.description.html_safe %></p>
+        </div> 
+      </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
         <%= render "concerts/location" %>
     </div>
 </div>

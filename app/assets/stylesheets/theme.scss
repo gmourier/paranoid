@@ -1,2 +1,74 @@
-// Sass theme file
-// Use it to override default bootstrap theme
+@import "variables";
+
+html{
+    position: relative;
+    min-height: 100%;
+}
+//Body
+body{
+    background-image: url(/assets/blur.jpg);
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+    margin-bottom:60px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'BebasNeue';
+}
+
+// NavBar
+.navbar {
+    font-family:'BebasNeue';
+    font-size: $font-size-xl;
+    border:none !important;
+}
+.navbar-brand{
+    font-size: $font-size-xxl;
+}
+
+// Panel
+.panel {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.panel .panel-heading{
+    border-left: 6px solid $fern-base;
+    border-bottom: none !important;
+}
+
+.panel .panel-heading .panel-title{
+    font-family: 'BebasNeue';
+    font-size: $font-size-xl !important;
+    color: #fff !important;
+}
+
+.no-padding {
+    padding: 0px !important;
+}
+// Concerts
+.concert-date {
+    background-color: $fern-base;
+    background: -webkit-linear-gradient(top, $fern-light 0%, $fern-base 100%); /* Chrome10+,Safari5.1+ */
+    font-size: $font-size-xxl;
+    color: #fff;
+    font-family: 'BebasNeue';
+    text-align:center;
+}
+// Footer
+.footer {
+    margin-top: 40px;
+    padding-top: 40px;
+    color:#fff;
+    padding-bottom: 40px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+
+.footer .brand {
+    font-family: 'BebasNeue';
+    font-size: $font-size-xxl;
+}

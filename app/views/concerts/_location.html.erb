@@ -3,7 +3,7 @@
     <h3 class="panel-title">Location</h3>
   </div>
   <% if @concert.lat? && @concert.long? %>
-    <div class="panel-body">
+    <div class="panel-body no-padding">
       <%= image_tag @concert.display_map, class: "img-responsive"  if @concert.long and @concert.lat %>
     </div>
     <div class="panel-footer">

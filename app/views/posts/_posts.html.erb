@@ -10,11 +10,11 @@
           <p class="text-justify"><%= truncate(strip_tags(post.content), length: 200) %></p>
           <p class="pull-right">
             <% post.tags.each do |t| %>
-            <span class="label label-warning"><%= t.label %></span> 
+            <span class="label label-default"><%= t.label %></span> 
             <% end %>
           </p>
           <ul class="list-inline">
-            <li><a href="#"><%= distance_of_time_in_words_to_now(post.created_at) %> ago</a></li>
+            <li><a href="#"><%= distance_of_time_in_words_to_now(post.created_at).capitalize %> ago</a></li>
           </ul>
         </div>
       </div>

@@ -7,9 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  </br>
-  <div class="container">
-    <nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-inverse">
+    <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
           <span class="sr-only">Toggle navigation</span>
@@ -24,15 +23,16 @@
           <%= render "utils/nav" %>
         </ul>
       </div><!--/.nav-collapse -->
-    </nav>
-  </div>
+    </div>
+  </nav>
+
   <div class="container">
     <%= yield %>
   </div>
-  <hr>
+
   <div class="footer">
     <div class="container">
-      Paranoid Sky - <%= Time.now.year %> <span class="small pull-right">Crafted by Guillaume Mourier</span>
+      <span class="brand" href="#">Paranoid Sky</span><span class="pull-right">Crafted by @gmourier</span>
     </div>
   </div>
 </body>

@@ -3,7 +3,11 @@
   <li class="active"><%= @page.title.capitalize %></li>
 </ol>
 
-<h1><%= @page.title.capitalize %></h1>
-<p class="text-justify">
-    <%= @page.content.html_safe %>
-</p>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h1><%= @page.title.capitalize %></h1>
+        <p class="text-justify">
+            <%= @page.content.html_safe %>
+        </p>
+    </div>
+</div>
