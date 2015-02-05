@@ -2,6 +2,7 @@
   <div class="panel-heading">
     <h3 class="panel-title">Upcoming Concerts</h3>
   </div>
+  <% if !@concerts.empty? %>
   <div class="panel-body no-padding">
     <% @concerts.each do |concert| %>
       <div class="clearfix">
@@ -16,6 +17,11 @@
     </div>
     <% end %>
   </div>
+  <% else %>
+    <div class="panel-body">
+      <i>No concert yet</i>
+    </div>
+  <% end %>
   <div class="panel-footer">
     <%= link_to "All concerts", concerts_path %>
   </div>
