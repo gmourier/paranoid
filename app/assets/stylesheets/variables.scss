@@ -7,15 +7,15 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
+$main-base:              #19B5FE;
+$main-light:             lighten($main-base, 10%);
+
 $gray-base:              #000 !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              lighten($gray-base, 20%) !default;   // #333
 $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
-
-$fern-base:           #3FC380;//#1ABC9C;
-$fern-light: lighten($fern-base, 10%);
 
 $brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
 $brand-success:         #5cb85c !default;
@@ -34,7 +34,7 @@ $body-bg:               #fff !default;
 $text-color:            $gray-darker !default;
 
 //** Global textual link color.
-$link-color:            $fern-base !default;
+$link-color:            $main-base !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%) !default;
 //** Link hover decoration.
@@ -180,7 +180,7 @@ $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !def
 
 // Inverted navbar links
 $navbar-inverse-link-color:                 #fff !default;
-$navbar-inverse-link-hover-color:           $fern-base !default;
+$navbar-inverse-link-hover-color:           $main-base !default;
 $navbar-inverse-link-hover-bg:              transparent !default;
 
 // Inverted navbar brand label
@@ -292,7 +292,7 @@ $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !
 //##
 
 //** Default label background color
-$label-default-bg:            $fern-base !default;
+$label-default-bg:            $main-base !default;
 //** Primary label background color
 $label-primary-bg:            $brand-primary !default;
 //** Success label background color

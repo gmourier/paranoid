@@ -4,9 +4,8 @@ html{
     position: relative;
     min-height: 100%;
 }
-//Body
 body{
-    background-image: url(/assets/blur.jpg);
+    background-image:  -webkit-gradient(linear, left top, left bottom, from(rgba($main-base, 0.5)), to(rgba($main-base, 0.5))), url(/assets/blur.jpg);
     -webkit-background-size:cover;
     -moz-background-size:cover;
     -o-background-size:cover;
@@ -34,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .panel .panel-heading{
-    border-left: 6px solid $fern-base;
+    border-left: 6px solid $main-base;
     border-bottom: none !important;
 }
 
@@ -49,8 +48,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 // Concerts
 .concert-date {
-    background-color: $fern-base;
-    background: -webkit-linear-gradient(top, $fern-light 0%, $fern-base 100%); /* Chrome10+,Safari5.1+ */
+    background-color: $main-base;
+    background: -webkit-linear-gradient(top, $main-light 0%, $main-base 100%); /* Chrome10+,Safari5.1+ */
     font-size: $font-size-xxl;
     color: #fff;
     font-family: 'BebasNeue';
