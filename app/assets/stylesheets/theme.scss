@@ -43,9 +43,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff !important;
 }
 
-.no-padding {
-    padding: 0px !important;
-}
 // Concerts
 .concert-date {
     background-color: $main-base;
@@ -70,4 +67,9 @@ h1, h2, h3, h4, h5, h6 {
 .footer .brand {
     font-family: 'BebasNeue';
     font-size: $font-size-xxl;
+}
+
+// Utils
+.no-padding {
+    padding: 0px !important;
 }
