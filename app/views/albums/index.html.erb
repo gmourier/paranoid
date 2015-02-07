@@ -4,15 +4,16 @@
 </ol>
 
 <div class="row">
-  <div class="col-md-8">
-    <%= paginate @albums, :theme => 'twitter-bootstrap-3' %>
     <% @albums.each do |album| %>
-      <%= link_to album.name, album %>
-      <hr>
+      <div class="col-md-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><%= album.name.capitalize %></h3>
+          </div>
+          <div class="panel-body no-padding">
+            <%= link_to (image_tag album.cover.url(:medium), class: "img-responsive"), album %>
+          </div>
+        </div>
+      </div>
     <% end %>
-    <%= paginate @albums, :theme => 'twitter-bootstrap-3' %>
-  </div>
-  <div class="col-md-4">
-    <%= render "utils/like" %>
-  </div>
 </div>
