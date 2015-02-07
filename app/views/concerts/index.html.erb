@@ -3,16 +3,21 @@
   <li class="active">Concerts</li>
 </ol>
 
-<div class="row">
-  <div class="col-md-8">
-    <%= paginate @concerts, :theme => 'twitter-bootstrap-3' %>
-    <% @concerts.each do |concert| %>
-      <%= link_to concert.name, concert %>
-      <hr>
-    <% end %>
-    <%= paginate @concerts, :theme => 'twitter-bootstrap-3' %>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Concerts</h3>
   </div>
-  <div class="col-md-4">
-    <%= render "utils/like" %>
+  <div class="panel-body">
+    <% if !@concerts.empty? %>
+      <% @concerts.each do |concert| %>
+        <h4><%= link_to concert.name.capitalize, concert %></h4>
+        <%= concert.city %> - <%= concert.country %>
+        <hr>
+      <% end %>
+    <% else %>
+      <i>No concert yet</i>
+    <% end %>
   </div>
 </div>
+
+<%= paginate @concerts, :theme => 'twitter-bootstrap-3' %>
