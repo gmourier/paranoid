@@ -3,31 +3,23 @@
   <li class="active">Posts</li>
 </ol>
 
-<%= paginate @posts, :theme => 'twitter-bootstrap-3' %>
 
-<% @posts.each do |post| %>
-  <div class="media">
-    <div class="media-left">
-      <a href="#">
-        <img class="media-object" src="http://lorempicsum.com/futurama/64/64/1">
-      </a>
-    </div>
-    <div class="media-body">
-      <h4 class="media-heading"><%= post.title %></h4>
-      <p><%= truncate(strip_tags(post.content), length: 50) %></p>
-    </div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Posts</h3>
   </div>
-  </br>
-  <p class="lead"><%= link_to "Read more", post, :class => "btn btn-sm btn-default" %></p>
-  <p class="pull-right">
-    <span class="label label-default">keyword</span> 
-    <span class="label label-default">tag</span> 
-    <span class="label label-default">post</span>
-  </p>
-  <ul class="list-inline">
-    <li><a href="#"><%= distance_of_time_in_words_to_now(post.created_at) %> ago</a></li>
-  </ul>
-  <hr>
-<% end %>
+  <div class="panel-body">
+    <% if !@posts.empty? %>
+      <% @posts.each do |post| %>
+        <h4><%= link_to post.title.capitalize, post %></h4>
+        <%= post.created_at.strftime("%D") %>
+        <hr>
+      <% end %>
+    <% else %>
+      <i>No post yet</i>
+    <% end %>
+  </div>
+</div>
 
 <%= paginate @posts, :theme => 'twitter-bootstrap-3' %>
